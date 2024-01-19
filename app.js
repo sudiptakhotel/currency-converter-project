@@ -4,7 +4,7 @@ const BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/
 
 const button = document.querySelector("button");
 //selecting 2 <select>
-const dropdown = document.querySelectorAll(".dropdown select")
+const dropdown = document.querySelectorAll(".dropdown select");
 
 let message = document.querySelector(".message");
 
@@ -64,9 +64,8 @@ button.addEventListener("click" , async (e)=>{
      let value = converted_value[`${converted_country}`];
      console.log(value);
 
-     let result = Number(amountVal) * value;
+     let result = Math.floor(Number(amountVal) * value);
      message.innerHTML = `${amountVal} ${fromCurr.value} = ${result} ${toCurr.value}`
    
-    
 })
 
